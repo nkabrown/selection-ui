@@ -22,6 +22,7 @@ swatches.on('click', function(d) {
         swatches.style('opacity', 1);
         selectedElement.classed('selected', false);
       } else {
+        swatches.classed('selected', false);
         selectedElement.classed('selected', true);
         swatches.filter(s => s !== selectedItem).style('opacity', 0.3);
         swatches.filter(s => s === selectedItem).style('opacity', 1);

@@ -15,8 +15,15 @@ d3.select('.selection-ui-container').selectAll('.swatch')
 
 const swatches = d3.selectAll('.swatch');
 
-swatches.on('click', (d) => {
+swatches.on('click', function(d) {
       const selectedItem = d;
-      swatches.filter(s => s !== selectedItem).style('opacity', 0.3);
-      swatches.filter(s => s === selectedItem).style('opacity', 1);
+      const selectedElement = d3.select(this);
+      if (selectedElement.classed('selected')) {
+        swatches.style('opacity', 1);
+        selectedElement.classed('selected', false);
+      } else {
+        selectedElement.classed('selected', true);
+        swatches.filter(s => s !== selectedItem).style('opacity', 0.3);
+        swatches.filter(s => s === selectedItem).style('opacity', 1);
+      }
     });

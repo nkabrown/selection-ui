@@ -1,0 +1,25 @@
+.selection-ui-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 60%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.swatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 105px;
+  height: 105px;
+  margin: 5px 0;
+}
+
+.order-marker {
+  font-family: "Avenir", sans-serif;
+  font-size: 2.5em;
+  color: #fff;
+}
